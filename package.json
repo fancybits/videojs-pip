@@ -8,7 +8,8 @@
     "url": "git+https://github.com/fancybits/videojs-pip.git"
   },
   "keywords": [
-    "video.js"
+    "video.js",
+    "videojs-plugin"
   ],
   "author": "Fancy Bits, LLC",
   "license": "MIT",

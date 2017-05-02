@@ -1,0 +1,22 @@
+$icon-font-path: 'fonts' !default;
+
+@font-face {
+  font-family: 'videojs-pipButton';
+  src:url('#{$icon-font-path}/pipButton.eot');
+  src:url('#{$icon-font-path}/pipButton.eot?#iefix') format('embedded-opentype'),
+    url('#{$icon-font-path}/pipButton.ttf') format('truetype'),
+    url('#{$icon-font-path}/pipButton.woff') format('woff'),
+    url('#{$icon-font-path}/pipButton.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.vjs-pip-control {
+  font-family: 'videojs-pipButton';
+  float: right;
+  cursor: pointer;
+}
+
+.vjs-pip-control:before {
+  content: "\e128";
+}

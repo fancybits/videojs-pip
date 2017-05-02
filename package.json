@@ -1,0 +1,19 @@
+{
+  "name": "videojs-pip",
+  "version": "1.0.0",
+  "description": "video.js plugin to add a PIP button if the browser supports webkitSupportsPresentationMode",
+  "main": "videojs-pip.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fancybits/videojs-pip.git"
+  },
+  "keywords": [
+    "video.js"
+  ],
+  "author": "Fancy Bits, LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fancybits/videojs-pip/issues"
+  },
+  "homepage": "https://github.com/fancybits/videojs-pip#readme"
+}

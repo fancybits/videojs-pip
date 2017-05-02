@@ -13,6 +13,9 @@ $icon-font-path: '~videojs-pip/fonts/';
 
 ```js
 require('videojs-pip')
+videojs(element, {
+  pipButton: {}
+})
 ```
 
 ## License

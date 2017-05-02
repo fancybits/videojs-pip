@@ -15,6 +15,10 @@ $icon-font-path: 'fonts' !default;
   font-family: 'videojs-pipButton';
   float: right;
   cursor: pointer;
+
+  &.active {
+    color: #66a8cc;
+  }
 }
 
 .vjs-pip-control:before {

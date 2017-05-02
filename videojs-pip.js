@@ -5,6 +5,11 @@ const Button = videojs.getComponent('Button')
 class PipToggle extends Button {
   constructor(player, options) {
     super(player, options)
+    let toggle = this
+    let video = player.el().getElementsByTagName('video')[0]
+    video.addEventListener('webkitpresentationmodechanged', function(event){
+      toggle.updateState(video.webkitPresentationMode)
+    })
   }
   buildCSSClass() {
     return `vjs-pip-control ${super.buildCSSClass()}`
@@ -13,6 +18,16 @@ class PipToggle extends Button {
     let video = this.player().el().getElementsByTagName('video')[0]
     let mode = video.webkitPresentationMode === "picture-in-picture" ? "inline" : "picture-in-picture"
     video.webkitSetPresentationMode(mode)
+  }
+  updateState(mode) {
+    if (mode == "picture-in-picture") {
+      this.addClass('active')
+      this.inactivityTimeout = this.player_.options_.inactivityTimeout
+      this.player_.options_.inactivityTimeout = 0
+    } else {
+      this.removeClass('active')
+      this.player_.options_.inactivityTimeout = this.inactivityTimeout
+    }
   }
 }
 

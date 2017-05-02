@@ -24,6 +24,7 @@ class PipToggle extends Button {
       this.addClass('active')
       this.inactivityTimeout = this.player_.options_.inactivityTimeout
       this.player_.options_.inactivityTimeout = 0
+      this.player_.userActive(true)
     } else {
       this.removeClass('active')
       this.player_.options_.inactivityTimeout = this.inactivityTimeout

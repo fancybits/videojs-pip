@@ -1,6 +1,6 @@
 {
   "name": "videojs-pip",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "video.js plugin to add a PIP button if the browser supports webkitSupportsPresentationMode",
   "repository": {
     "type": "git",

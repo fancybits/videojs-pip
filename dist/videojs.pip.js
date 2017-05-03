@@ -72,7 +72,7 @@ var PipButton = function PipButton(options) {
 
   if (video.webkitSupportsPresentationMode && typeof video.webkitSetPresentationMode === "function") {
     player.on('loadeddata', function () {
-      if (!player.controlBar.childNameIndex_.hasOwnProperty('PipToggle')) {
+      if (!player.controlBar.childNameIndex_.hasOwnProperty('PipToggle') && video.webkitSupportsPresentationMode("picture-in-picture")) {
         var PipToggle = this.controlBar.addChild('PipToggle', options);
         player.controlBar.el().insertBefore(PipToggle.el(), player.controlBar.fullscreenToggle.el());
       }
